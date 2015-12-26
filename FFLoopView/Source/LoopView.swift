@@ -118,6 +118,8 @@ public class LoopView: UIView {
             
             // 滚动到倒数第二张图片
             dispatch_async(dispatch_get_main_queue()) {
+                //  Prepare view for data
+                self.collectionView.reloadData()
                 self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: urls.count, inSection: 0),
                     atScrollPosition: .Left,
                     animated: false)
